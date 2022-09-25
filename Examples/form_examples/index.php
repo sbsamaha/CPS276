@@ -14,7 +14,7 @@
 
  <!-- <p>Title <input type="text" size="5" name="somename"></p> -->
 
- <label>Title <input type="text" size="5" name="firstname"></label>
+ <label>Title <input type="text" size="10" name="firstname"></label>
 
  <!-- <label for="someid">Title</label> <input type="text" size="5" name="somename"
     id="someid"> -->
@@ -58,6 +58,7 @@
 
     <input type="submit" name = "submit" label ="click" />
 
+    
 
 </form>
 
