@@ -18,7 +18,10 @@ class Calculator{
                 $quotient=$var1/$var2;
                 echo "The quotient of the numbers is $quotient </br>";
             }
+        }else {
+            throw new Exception("You must enter a String and 2 numbers");
         }
+            
     }
 }
 
