@@ -24,13 +24,13 @@ $output = $addNames->addClearNames();
 
     <div class="form-group">
     <button type="submit" class="btn btn-primary" name="addNamesButton" id="addNamesButton">Add Names</button>
-    <button type="reset" class="btn btn-primary" name="clearNamesButton" id="clearNamesButton">Clear Names</button>
+    <button type="submit" class="btn btn-primary" name="clearNamesButton" id="clearNamesButton">Clear Names</button>
     </div>  
 
     <div class="form-row">
           <div class="col">
             <label for="names">Enter Names</label>
-            <input type="text" class="form-control" name=id="names">
+            <input type="text" class="form-control" name= "names" id="names">
           </div>
     </div>
 

@@ -10,27 +10,25 @@ class AddNamesProc{
 
             $name = $nameArray[1].", ".$nameArray[0];
 
-            sort($nameArray);
+            $newNameArray = explode("\n", $_POST['namelist']);
 
-            $name = implode(", ", $nameArray);
+            array_push($newNameArray, $name);
 
-            //$newNameArray = explode("\n", $_POST['namelist']);
+            sort($newNameArray);
 
-            //array_push($newNameArray, $name);
+            $output = implode("\n", $newNameArray);
 
-            //sort($newNameArray);
-
-            //$output = implode("\n", $newNameArray);
-
-            //return $output;
+            return $output;
         
-        }else if(isset($_POST['clearNamesButton'])) {
-            //$output = "";
         }
 
-       // return $output;
+        if(isset($_POST['clearNamesButton'])) {
+            $_POST['namelist'] == null;
+        }
 
-       return $name;
+        
+
+       
 
     }
 
