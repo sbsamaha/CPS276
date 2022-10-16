@@ -30,7 +30,7 @@ $output = $addNames->addClearNames();
     <div class="form-row">
           <div class="col">
             <label for="names">Enter Names</label>
-            <input type="text" class="form-control" name="names" id="names">
+            <input type="text" class="form-control" name=id="names">
           </div>
     </div>
 
