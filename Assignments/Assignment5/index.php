@@ -1,4 +1,6 @@
 <?php
+$msg="";
+
 if(isset($_POST['submit'])) {
     require_once 'Directories.php';
     $directory = new Directories();

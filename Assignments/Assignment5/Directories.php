@@ -7,7 +7,7 @@ class Directories {
         global $msg;
 
         if(isset($_POST['submit'])) {
-           
+
             if(isset($_POST['folderName'])) {
                 $folderName = $_POST['folderName'];
                 
