@@ -19,12 +19,11 @@ class Directories {
 
                     $userDir = mkdir($dirPath, 0777);
                     chmod($dirPath, 0777);
+
+                    $file = fopen($dirPath."/readme.txt", "w");
     
-                    $filePath = $dirPath."/readme.txt";
-                    $file = fopen($filePath, "w");
-    
-                    if(isset($_POST['contents'])) {
-                        $contents = $_POST['contents'];
+                    if(isset($_POST['folderContents'])) {
+                        $contents = $_POST['folderContents'];
 
                         fwrite($file,$contents);
                         fclose($file);
