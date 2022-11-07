@@ -1,8 +1,6 @@
 <?php
-require_once 'fileUploadProc.php';
-
+require_once "listFileProc.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,41 +10,24 @@ require_once 'fileUploadProc.php';
 
     <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
-    <title>Assignment 7</title>
+    <title>File List</title>
 </head>
 <body>
-    
 <div id="wrapper" class="container">
-        <h1>File Upload</h1>
+        <h1>List Files</h1>
 
-    <form method="POST" action="index.php">
+    <form method="POST" action="list.php">
 
 
     <div class ="form-row">
 
-        <p><a href = "list.php">Show File List</a></p>
+        <p><a href = "index.php">Add File</a></p>
 
     </div>
 
     <div class = "form-row">
         <p><?php echo $output ?></p>
     </div>
-
-    <div class="form-row">  
-        <label for="names">File Name</label>
-        <input type="text" class="form-control" name= "fileName" id="fileName">
-    </div>
-
-    <div class="form-row">
-        <input type="file" class="form-group" name="fileUpload" id="fileUpload" />
-    </div>
-
-    <div class="form-row">
-        <input type="submit" class="btn btn-primary" name="upload" value="Upload File">
-    </div>
-
-</div>
-
 
 </body>
 </html>
