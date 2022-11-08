@@ -1,5 +1,11 @@
 <?php
-require_once 'fileUploadProc.php';
+if(count($_POST) > 0) {
+    require_once 'classes/fileUploadProc.php';
+    $file = new FileUpload();
+    $output = $file->addFile();
+}else {
+    $output = "";
+}
 
 ?>
 
@@ -38,7 +44,7 @@ require_once 'fileUploadProc.php';
     </div>
 
     <div class="form-row">
-        <input type="file" class="form-group" name="fileUpload" id="fileUpload" />
+        <input type="file" class="form-group" name="file" id="file" />
     </div>
 
     <div class="form-row">

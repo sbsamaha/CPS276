@@ -1,5 +1,9 @@
 <?php
-require_once "listFileProc.php";
+require_once 'classes/listFilesProc.php';
+$fileList = new listFile();
+$output = $fileList->getFile();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +28,7 @@ require_once "listFileProc.php";
         <p><a href = "index.php">Add File</a></p>
 
     </div>
-
-    <div class = "form-row">
-        <p><?php echo $output ?></p>
-    </div>
+        <?php echo $output?>
 
 </body>
 </html>
