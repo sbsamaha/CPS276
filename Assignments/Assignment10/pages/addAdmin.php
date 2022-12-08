@@ -85,10 +85,12 @@ function addData($post){
 
       $sql = "INSERT INTO admin (name, email, password, status) VALUES (:name, :email, :password, :status)";
 
+      $password = password_hash($post['password'], PASSWORD_DEFAULT);
+
       $bindings = [
         [':name',$post['name'],'str'],
         [':email',$post['email'],'str'],
-        [':password',$post['password'],'str'],
+        [':password',$password,'str'],
         [':status',$post['status'],'str'],
       ];
 
@@ -98,7 +100,8 @@ function addData($post){
         return getForm("<p>There was a problem processing your form</p>", $elementsArr);
       }
       else {
-        return getForm("<p>Contact Information Added</p>", $elementsArr);
+
+        return getForm("<p>Admin Information Added</p>", $elementsArr);
       }
       
 }

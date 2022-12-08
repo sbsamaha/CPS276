@@ -107,7 +107,7 @@ $elementsArr = [
     "errorOutput"=>"",
     "action"=>"required",
     "type"=>"radio",
-    "value"=>["age1"=>"", "age2"=>"", "age3"=>"", "age4"=>""]
+    "value"=>["10-18"=>"", "19-30"=>"", "30-50"=>"", "51+"=>""]
   ]
 ];
 
@@ -148,7 +148,7 @@ function addData($post){
         [':state',$post['state'],'str'],
         [':phone',$post['phone'],'str'],
         [':email',$post['email'],'str'],
-        [':age',$post['age'],'str'],
+        [':dob',$post['dob'],'str'],
         [':contactType',$contactType,'str'],
         [':age',$age,'str']
       ];
@@ -229,22 +229,22 @@ $form = <<<HTML
 
     <p>Please select an age range (you must select one):</p>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="age" id="age1" value="age1"  {$elementsArr['age']['value']['age1']}>
+      <input class="form-check-input" type="radio" name="age" id="10-18" value="10-18"  {$elementsArr['age']['value']['10-18']}>
       <label class="form-check-label" for="age1">10-18</label>
     </div>
 
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="age" id="age2" value="age2"  {$elementsArr['age']['value']['age2']}>
+      <input class="form-check-input" type="radio" name="age" id="19-30" value="19-30"  {$elementsArr['age']['value']['19-30']}>
       <label class="form-check-label" for="age2">19-30</label>
     </div>
 
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="age" id="age3" value="age3"  {$elementsArr['age']['value']['age3']}>
+      <input class="form-check-input" type="radio" name="age" id="30-50" value="30-50"  {$elementsArr['age']['value']['30-50']}>
       <label class="form-check-label" for="age3">30-50</label>
     </div>
 
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="age" id="age4" value="age4"  {$elementsArr['age']['value']['age4']}>
+      <input class="form-check-input" type="radio" name="age" id="51+" value="51+"  {$elementsArr['age']['value']['51+']}>
       <label class="form-check-label" for="age4">51+</label>
     </div>
 
