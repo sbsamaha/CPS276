@@ -85,16 +85,28 @@ function addData($post){
 
       $sql = "INSERT INTO admin (name, email, password, status) VALUES (:name, :email, :password, :status)";
 
+
       $password = password_hash($post['password'], PASSWORD_DEFAULT);
 
       $bindings = [
         [':name',$post['name'],'str'],
-        [':email',$post['email'],'str'],
         [':password',$password,'str'],
         [':status',$post['status'],'str'],
+        [':email',$post['email'],'str'],
       ];
 
-      $result = $pdo->otherBinded($sql, $bindings);
+      $emailBinding = [
+        [':email',$post['email'],'str'],
+      ];
+
+      $emailSql = "SELECT * FROM admin WHERE email = :email";
+
+      $emailResult = $pdo->selectBinded($emailSql, $emailBinding);
+
+
+      if(count($emailResult) != 0) {
+        return getForm("<p>That email already exists</p>", $elementsArr);
+      }
 
       if($result == "error"){
         return getForm("<p>There was a problem processing your form</p>", $elementsArr);
