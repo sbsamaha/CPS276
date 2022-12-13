@@ -14,6 +14,7 @@ class Validation{
 			case "city": return $this->city($value); break;
 			case "email": return $this->email($value); break;
 			case "dob": return $this->dob($value); break;
+			case "password": return $this->password($value); break;
 		}
 	}
 
@@ -47,6 +48,11 @@ class Validation{
 
 	private function dob($value){
 		$match = preg_match('/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}/', $value);
+		return $this->setError($match);
+	}
+
+	private function password($value) {
+		$match = preg_match('/^[a-z]{1,50}$/i', $value);
 		return $this->setError($match);
 	}
 

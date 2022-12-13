@@ -111,11 +111,6 @@ function addData($post){
       $result = $pdo->otherBinded($sql, $bindings);
 
       
-
-      
-
-
-
       if($result == "error"){
         return getForm("<p>There was a problem processing your form</p>", $elementsArr);
       }
