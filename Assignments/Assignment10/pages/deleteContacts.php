@@ -41,7 +41,7 @@ function init(){
     }
     else {
         $output = "<form method='post' action='index.php?page=deleteContacts'>";
-        $output .= "<input type='submit' class='btn btn-danger' name='delete' value='Delete'/><br><br><table class='table table-striped table-bordered'>
+        $output .="<h1>Delete Contact(s)</h1><br><input type='submit' class='btn btn-danger' name='delete' value='Delete'/><br><br><table class='table table-striped table-bordered'>
     <thead>
         <tr>
         <th>Name</th>

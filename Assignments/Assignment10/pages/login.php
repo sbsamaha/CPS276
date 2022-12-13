@@ -118,6 +118,8 @@ global $stickyForm;
 $form = <<<HTML
     <form method="post" action="index.php?page=login">
 
+  <h1>Login</h1>
+
     <div class="form-group">
       <label for="email">Email Address{$elementsArr['email']['errorOutput']}</label>
       <input type="text" class="form-control" id="email" name="email" value="{$elementsArr['email']['value']}" >
