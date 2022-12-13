@@ -66,7 +66,7 @@ function init(){
             $msg = "<p>Could not delete the contact(s)</p>";
         }
         else {
-            $msg = "<p>Contact(s) deleted</p>";
+            $msg = "<p>Admin(s) deleted</p>";
         }
     }
     else {

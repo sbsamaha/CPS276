@@ -230,10 +230,10 @@ $form = <<<HTML
     </div>
         
 
-    <p>Please select an age range (you must select one):</p>
+    <p>Please select an age range (you must select one): {$elementsArr['age']['errorOutput']}</p>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" name="age" id="10-18" value="10-18"  {$elementsArr['age']['value']['10-18']}>
-      <label class="form-check-label" for="age1">10-18</label>
+      <label class="form-check-label" for="age1">10-18 </label>
     </div>
 
     <div class="form-check form-check-inline">
