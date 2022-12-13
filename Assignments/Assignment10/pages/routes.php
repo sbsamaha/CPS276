@@ -10,7 +10,7 @@ $adminNav = <<<HTML
         <li class="nav-item"><a class="nav-link active" href="index.php?page=deleteContacts">Delete Contacts</a></li>
         <li class="nav-item"><a class="nav-link active" href="index.php?page=addAdmin">Add Admin</a></li>
         <li class="nav-item"><a class="nav-link active" href="index.php?page=deleteAdmins">Delete Admins</a></li>
-        <li class="nav-item"><a class="nav-link active" href="index.php?page=logout">Logout</a></li>
+        <li class="nav-item"><a class="nav-link active" href="logout.php">Logout</a></li>
     </ul>
 </nav>
 HTML;
@@ -20,7 +20,7 @@ $staffNav = <<<HTML
     <ul class="nav">
         <li class="nav-item"><a class="nav-link active" href="index.php?page=addContact">Add Contact</a></li>
         <li class="nav-item"><a class="nav-link active" href="index.php?page=deleteContacts">Delete Contacts</a></li>
-        <li class="nav-item"><a class="nav-link active" href="index.php?page=logout">Logout</a></li>
+        <li class="nav-item"><a class="nav-link active" href="logout.php">Logout</a></li>
     </ul>
 </nav>
 HTML;
